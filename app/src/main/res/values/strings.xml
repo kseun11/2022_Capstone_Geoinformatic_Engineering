@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">capstone</string>
+
+    <string name="tmap_api_key">l7xxc4f95c1bf08249bfa288956272cec37d</string>
+
+    <string name="title_activity_list_view">ListViewActivity</string>
+    <string name="title_activity_search_center">SearchCenterActivity</string>
+</resources>
