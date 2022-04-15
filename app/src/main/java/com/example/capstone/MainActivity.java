@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -83,7 +84,45 @@ public class MainActivity extends AppCompatActivity {
 
         final_list.setAdapter(adapter); // 리스트뷰에 어답터 연결
 
+
+/*
+        // My뿜딜 버튼 클릭시
+        Button btnInfo = (Button) findViewById(R.id.btnInfo);
+        btnInfo.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplication(), InfoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // 뿜딜 버튼 클릭시
+        Button btnHome = (Button) findViewById(R.id.btnHome);
+        btnHome.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+                Toast.makeText(getApplicationContext(), "홈 화면", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplication(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        // 로그인 버튼 클릭시
+        Button btnLogin = (Button) findViewById(R.id.btnLogin);
+        btnLogin.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplication(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+ */
     }
+
 
     public void convertTodAddress() {
         AlertDialog.Builder addressSearchBuilder = new AlertDialog.Builder(this);
@@ -133,3 +172,4 @@ public class MainActivity extends AppCompatActivity {
         addressSearchBuilder.show();
     }
 }
+

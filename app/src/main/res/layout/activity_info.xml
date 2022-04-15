@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/profile"
+            android:text="이름"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/profile"
+            android:text="계정 이메일"
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:id="@+id/menuPersonalInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="개인 정보"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btnManageAccount"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/profile"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="#D3C1F1"
+            android:text="계정 관리"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btnSetting"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/btnManageAccount"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="#D3C1F1"
+            android:text="환경 설정"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/menuProfileSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnSetting"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="프로필 / 설정"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btnSetAlarm"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/menuProfileSetting"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="#D3C1F1"
+            android:text="알림 설정"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btnCheckOrder"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/btnSetAlarm"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="#D3C1F1"
+            android:text="나의 주문 확인"
+            android:textSize="30dp" />
+
+
+        <TextView
+            android:id="@+id/menuExtra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnCheckOrder"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="일반"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btnInquiry"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/menuExtra"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="#D3C1F1"
+            android:text="문의하기"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btnHelp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/btnInquiry"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="#D3C1F1"
+            android:text="도움말"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_below="@+id/btnHelp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#D3C1F1"
+            android:text="로그아웃"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
