@@ -18,6 +18,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.capstone.adapter.ListViewAdapter;
 import com.skt.Tmap.TMapPoint;
 
+// 이 액티비티의 역할: 명칭으로 주소를 검색하면 명칭과 관련된 주소가 쭉 리스트로 나오는 액티비티
+
 public class ListViewActivity extends AppCompatActivity {
     int size = 0;
 
@@ -35,6 +37,7 @@ public class ListViewActivity extends AppCompatActivity {
         AddressListView.setAdapter(listViewAdapter); // 리스트뷰에 어답터 연결
 
         for (int i = 0; i < POIitemSize; i++) {
+            // addItem()은 [ListViewAdapter.java]에서 생성한 메서드.
             listViewAdapter.addItem(POIResult[i], AddressResult[i], POILat[i], POILon[i]);
         } // 어답터에 주소의 이름과 상세주소, 위도 경도 추가
         AddressListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -42,12 +45,12 @@ public class ListViewActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 TMapPoint temp = new TMapPoint(POILat[position], POILon[position]);
                 array_saving_class.alTMapPoint.add(temp);
-                array_saving_class.nameOfIt.add(POIResult[position]);
-                array_saving_class.addressOfIt.add(AddressResult[position]);
+                array_saving_class.nameOfIt.add(POIResult[position]);        // 주소명
+                array_saving_class.addressOfIt.add(AddressResult[position]); // 해당 상세주소
                 POIName[size] = POIResult[position];
                 size++;
                 Intent MarkIntent = new Intent(getApplicationContext(), AddressMarkAcitvity.class);
-                startActivity(MarkIntent);
+                startActivity(MarkIntent);  // 주소를 마커로 표시해주는 액티비티로 이동
                 // Log.d("Position", "Position : " + position);
             }
         });
